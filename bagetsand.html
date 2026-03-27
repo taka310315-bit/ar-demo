@@ -8,12 +8,21 @@ src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
 </script>
 
 <style>
-  /* ボタンの配置をカスタマイズするCSS */
+  /* 1. model-viewer 自体の配置を基準にする */
+  model-viewer {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: relative; /* 子要素（ボタン）の基準点になります */
+  }
+
+  /* 2. ボタンのスタイルを強制適用する */
   #custom-ar-button {
-    position: absolute;
-    top: 20px;          /* 上端からの距離 */
-    left: 50%;          /* 左から50%の位置へ */
-    transform: translateX(-50%); /* 自分の幅の半分だけ左に戻して中央寄せ */
+    /* 配置の指定 */
+    position: absolute !important; 
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     
     /* 見た目の調整 */
     font-size: 40px;    /* 60pxだとスマホで巨大すぎる可能性があるため調整 */
