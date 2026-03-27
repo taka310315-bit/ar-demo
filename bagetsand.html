@@ -7,6 +7,25 @@
 src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
 </script>
 
+<style>
+  /* ボタンの配置をカスタマイズするCSS */
+  #custom-ar-button {
+    position: absolute;
+    top: 20px;          /* 上端からの距離 */
+    left: 50%;          /* 左から50%の位置へ */
+    transform: translateX(-50%); /* 自分の幅の半分だけ左に戻して中央寄せ */
+    
+    /* 見た目の調整 */
+    font-size: 40px;    /* 60pxだとスマホで巨大すぎる可能性があるため調整 */
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    white-space: nowrap; /* 改行を防ぐ */
+    z-index: 100;       /* 重なり順を一番上に */
+  }
+</style>
+
 </head>
 
 <body style="margin:0;">
