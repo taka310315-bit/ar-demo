@@ -7,6 +7,35 @@
 src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
 </script>
 
+<style>
+  /* 1. model-viewer 自体の配置を基準にする */
+  model-viewer {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: relative; /* 子要素（ボタン）の基準点になります */
+  }
+
+  /* 2. ボタンのスタイルを強制適用する */
+  #custom-ar-button {
+    /* 配置の指定 */
+    position: absolute !important; 
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    
+    /* 見た目の調整 */
+    font-size: 50px;    /* 60pxだとスマホで巨大すぎる可能性があるため調整 */
+    padding: 10px 20px;
+    background-color: #333333 !important; /* ダークグレー */
+    color: #add8e6 !important;             /* ライトブルー (LightBlue) */
+    border: none !important;             /* ボーダーなし */
+    border-radius: 10px;                 /* 角丸 */
+    font-weight: bold;
+    white-space: nowrap; /* 改行を防ぐ */
+    z-index: 100;       /* 重なり順を一番上に */
+  }
+</style>
 </head>
 
 <body style="margin:0;">
